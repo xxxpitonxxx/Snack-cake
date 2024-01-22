@@ -1,0 +1,113 @@
+
+.card1{
+    background: rgb(197, 232, 233);
+}
+.card1:hover{
+    background: rgb(207, 236, 134);;
+}
+.card_color{
+    background: rgb(185, 184, 184);
+}
+.card_foto{
+    display: flex;
+    align-items: center;
+}
+h1{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.bor{
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.text{
+    font-family: "Goudy Bookletter 1911", cursive;
+}
+.but{
+    display: flex;
+    justify-content: center;
+}
+
+
+.img{
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+.foto{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.foto:hover{
+    width: 210px;
+    height: 210px;
+    margin: 0 auto;
+}
+
+.shop{
+    background: rgb(206, 204, 204);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 25px;
+
+}
+
+.goods_store{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+}
+
+
+
+.brend{
+    margin-top: 20px;
+    margin: 0 auto;
+    min-height: 30px;
+}
+
+.podr{
+    margin: 0 auto;
+}
+
+.ram{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 700px) {
+  
+    .shop{
+        background: rgb(206, 204, 204);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: 25px;
+    
+    }
+
+}
+
+@media (max-width: 500px) {
+  
+    .shop{
+        background: rgb(206, 204, 204);
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    
+    }
+    
+}
