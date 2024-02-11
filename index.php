@@ -1,4 +1,7 @@
+<?
+session_start();
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +77,7 @@
 
 <div class="but text h1">
       <?
-session_start();
+
 include 'dbconnect.php';
 
 if(!empty($_SESSION['login']))
@@ -87,17 +90,18 @@ if ($_POST['auth']) {
     $pass = md5($_POST['pass']);
 
     if (!empty($login) and !empty($pass)) {
-            
+      
             $db = dbconn();
 
             $query = $db->query("SELECT * FROM `Users` WHERE `login` = '$login' AND `pass` = '$pass' ");
-
-            if($query->num_rows > 0){
-                $row = $query->fetch_assoc();
+            if($query){
+                $data = mysqli_fetch_assoc($query);
+                
                 $_SESSION['auth'] = true;
-                $_SESSION['login'] = $login;
-                $_SESSION['role'] = $row['role'];
-                header('Location: /Snack-cake.php');
+                $_SESSION['login'] = $data['login'];
+                $_SESSION['role'] = $data['role'];
+                header('Location: /Snack.php');
+                
             } else{
                 echo 'Данные не верны';
             }
