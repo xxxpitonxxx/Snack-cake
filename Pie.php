@@ -17,6 +17,7 @@
 <?
 session_start();
 ?>
+
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container card1">
           <a class="navbar-brand" href="Snack.php">Snack<i class="fa-regular fa-handshake"></i>cake</a>
@@ -64,7 +65,7 @@ session_start();
             <div class="but1">
             <button class="btn btn-outline-danger" type="submit">Корзина <i class="fas fa-cart-shopping"></i></button>
             
-            <button onclick="window.location.href = 'index.php';" class="btn btn-outline-danger"  type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
+            <button onclick="window.location.href = 'index.php';" class="btn btn-outline-danger" type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
             </div>
             
           </div>
@@ -73,56 +74,13 @@ session_start();
       
       
 
-      
-      
-<div class="back">
+
+
+<div class="back">     
+
 
 <h1>Добро пожаловать в магазин Snack-cake!</h1>
 
-<br>
-<h2>У нас очень вкусно!</h2>
-
-
-<div id="carouselExampleDark" class="carousel carousel-dark slide carus">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-    <img src="files\мини пирожные.jpg" class="d-block w-100 carus" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2>Вкуснейшие пирожные</h5>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-    <img src="files\кондитерские изделия.jpg" class="d-block w-100 carus" alt="...">
-      
-      <div class="carousel-caption d-none d-md-block">
-        <h2>Только натуральные свежие продукты</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="files\красивая подача.jpg" class="d-block w-100 carus" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2>Профессиональная подача десертов</h5>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Назад</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Вперёд</span>
-  </button>
-</div>
-
-
-<br>
 <h2>Популярные товары</h2>
 
     
@@ -149,7 +107,7 @@ if($_SESSION['role'] == 'admin'){?>
             //заменяем на функцию ооп
             $db = dbconn();
 
-            $query = $db->query("SELECT * FROM `Snack-cake`");
+            $query = $db->query("SELECT * FROM `Pie`");
 
             while($row = $query->fetch_assoc()) {
              
@@ -178,13 +136,13 @@ if($_SESSION['role'] == 'admin'){?>
             }
         
             if($_SESSION['role'] == 'admin'){?>
-                <div class="tovar">
+              <div class="tovar">
 
-                  <a href="new.php" class=""><div  class=" btn btn-outline-secondary tovar foto but"></div></a>
-                  <div class="">
-                  <a class="podr btn btn-outline-info" href="/new.php?id=<?=$row['id']?>">Добавить товар</a>
-                  </div>
+                <a href="new.php" class=""><div  class=" btn btn-outline-secondary tovar foto but"></div></a>
+                <div class="">
+                <a class="podr btn btn-outline-info" href="/new.php?id=<?=$row['id']?>">Добавить товар</a>
                 </div>
+              </div>
                 
                 <?}
 
@@ -193,8 +151,10 @@ if($_SESSION['role'] == 'admin'){?>
 </div>
 </div>
 
-    <!-- Section: Links  -->
-    <section class="">
+
+
+<!-- Section: Links  -->
+<section class="">
       <div class="container text-center text-md-start mt-5 card1">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -272,7 +232,7 @@ if($_SESSION['role'] == 'admin'){?>
       </div>
     </section>
     <!-- Section: Links  -->
-  
+ 
 
 
 
