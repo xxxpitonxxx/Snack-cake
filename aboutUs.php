@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+
+    
 </head>
 
 
@@ -17,8 +20,6 @@
 <?
 session_start();
 ?>
-
-
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container card1">
           <a class="navbar-brand" href="index.php">Snack<i class="fa-regular fa-handshake"></i>cake</a>
@@ -66,7 +67,7 @@ session_start();
             <div class="but1">
             <button class="btn btn-outline-danger" type="submit">Корзина <i class="fas fa-cart-shopping"></i></button>
             
-            <button onclick="window.location.href = 'auth.php';" class="btn btn-outline-danger" type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
+            <button onclick="window.location.href = 'auth.php';" class="btn btn-outline-danger"  type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
             </div>
             
           </div>
@@ -75,87 +76,57 @@ session_start();
       
       
 
+<div class="back">
+<div class="responsive-container-block big-container">
+  <div class="responsive-container-block container">
+    <div class="responsive-container-block">
+      <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-12 img-one">
+        <img alt="golden-lines.png" class="image-block bg-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/golden%20lines.png">
+      </div>
+      <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-12 content-one">
+        <p class="text-blk section-head">
+          Информация о компании
+        </p>
+        <div class="">
+        <p class="text-blk section-text ">
+        Служба доставки и первый интернет магазин «Snack-cake» начали свою работу в 2020 году.
+         Нашей основной целью стало производство качественных, вкусных и безопасных десертов.
+        Мы сразу же начали отбор поставщиков, которые смогли бы предложить самые качественные продукты.
+         За несколько лет нам удалось сформировать постоянное взаимодействие российских и зарубежных поставщиков.
+        Благодаря качественным ингредиентам, мы выпускаем только продукцию высокого качества.
+         Большое количество постоянных поставщиков помогало нам в кризисы и во время введения санкций,
+          когда в России возник дефицит определенных категорий товаров.
 
+      Мы готовим десерты по традиционным российским, белорусским, французским и американским рецептам.
+       «Snack-cake» – это искусство готовить вкусно.
+        </p>
+        </div>
+        <p align=left class="text-blk section-text">
+          Основные приоритеты компании:
+          <li align=left>соблюдение традиционной рецептуры блюд;</li>
+          <li align=left>изысканный вкус блюд;</li>
+          <li align=left>сбалансированное применение крема и сахара;</li>
+          <li align=left>высокое качество сервиса при доставке;</li>
+          <li align=left>разнообразное меню на любой вкус;</li>
+          <li align=left>доброжелательный и приветливый персонал;</li>
+          <li align=left>профессиональные повара высшего класса.</li>
+          </p>
+          <br>
 
-<div class="back">     
-
-
-<h1>Добро пожаловать в магазин Snack-cake!</h1>
-
-<h2>Популярные товары</h2>
-
-    
-<div class="shop">
-
-<?
-session_start();
-include 'dbconnect.php';
-
-if($_SESSION['role'] == 'admin'){?>
- <!--  <div>
-        You Admin!  
-    </div>-->
-    <?}else{
-
-       // echo 'hello user';
+          «Snack-cake» – это большая семья, которая неизменно следует своим традициям и принципам. 
+          Каждый может прочувствовать себя частью этой семьи, насладиться качеством сервиса и 
+          доброжелательности и, конечно, отведать блюда, приготовленные превосходными поварами.
+          <br>
         
-    }
-    
-
-
-           
-
-            //заменяем на функцию ооп
-            $db = dbconn();
-
-            $query = $db->query("SELECT * FROM `Ice-cream`");
-
-            while($row = $query->fetch_assoc()) {
-             
-            ?>
-            
-            
-            <div class="tovar">
-           
-            <img class="foto" src="<?=$row['photo']?>" alt="">
-            <br>
-              <div class="name">
-            <?=$row['Название']?>
-            <br>
-            <?=$row['Цена']?>
-            <br> 
-            <?=$row['Вес']?>
-            <br>
-              </div>
-
-            <div class="podr btn btn-outline-info">
-            <a href="/card.php?id=<?=$row['id']?>">Подробнее</a>
-            </div>
-              
-            </div>
-            <?
-            }
-        
-            if($_SESSION['role'] == 'admin'){?>
-              <div class="tovar">
-
-                <a href="new.php" class=""><div  class=" btn btn-outline-secondary tovar foto but"></div></a>
-                <div class="">
-                <a class="podr btn btn-outline-info" href="/new.php?id=<?=$row['id']?>">Добавить товар</a>
-                </div>
-              </div>
-                
-                <?}
-
-
-?>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
 
-
-<!-- Section: Links  -->
-<section class="">
+    <!-- Section: Links  -->
+    <section class="">
       <div class="container text-center text-md-start mt-5 card1">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -233,7 +204,7 @@ if($_SESSION['role'] == 'admin'){?>
       </div>
     </section>
     <!-- Section: Links  -->
- 
+  
 
 
 

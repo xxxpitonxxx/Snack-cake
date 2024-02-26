@@ -21,7 +21,7 @@ session_start();
 
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container card1">
-          <a class="navbar-brand" href="Snack.php">Snack<i class="fa-regular fa-handshake"></i>cake</a>
+          <a class="navbar-brand" href="index.php">Snack<i class="fa-regular fa-handshake"></i>cake</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -51,13 +51,13 @@ session_start();
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Как купить</a>
+                <a class="nav-link active" aria-current="page" href="Howbuy.php">Как купить</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">О компании</a>
+                <a class="nav-link active" aria-current="page" href="aboutUs.php">О компании</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Контакты</a>
+                <a class="nav-link active" aria-current="page" href="Contact.php">Контакты</a>
               </li>
 
 
@@ -66,7 +66,7 @@ session_start();
             <div class="but1">
             <button class="btn btn-outline-danger" type="submit">Корзина <i class="fas fa-cart-shopping"></i></button>
             
-            <button onclick="window.location.href = 'index.php';" class="btn btn-outline-danger" type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
+            <button onclick="window.location.href = 'auth.php';" class="btn btn-outline-danger" type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
             </div>
             
           </div>
@@ -160,7 +160,7 @@ if($_SESSION['role'] == 'admin'){?>
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Snack<i class="fa-regular fa-handshake"></i>cake</a>
+              <i class="fas fa-gem me-3" href="index.php"></i>Snack<i class="fa-regular fa-handshake"></i>cake</a>
             </h6>
             <p>
                 По интересующим вопросам обращайтесь по телефону: +7(4842) 91-91-91 или напишите нам на почту snack-cake.@mail.ru 
@@ -175,16 +175,16 @@ if($_SESSION['role'] == 'admin'){?>
               Продукция
             </h6>
             <p>
-              <a href="#!" class="text-reset">Мороженое</a>
+              <a href="Icecream.php" class="text-reset">Мороженое</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Пирожные</a>
+              <a href="Cake.php" class="text-reset">Пирожные</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Торты</a>
+              <a href="Tort.php" class="text-reset">Торты</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Пончики</a>
+              <a href="Donut.php" class="text-reset">Пончики</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -199,7 +199,7 @@ if($_SESSION['role'] == 'admin'){?>
               <a href="#!" class="text-reset"></a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Как сделать заказ</a>
+              <a href="Howbuy.php" class="text-reset">Как сделать заказ</a>
             </p>
             <p>
               <a href="#!" class="text-reset">Способ оплаты</a>

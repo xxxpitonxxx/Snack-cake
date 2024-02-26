@@ -21,7 +21,7 @@
 
       
 
-      <h1 class="t1">Регистрация</h1>
+      <h1 class="t1 authH1">Регистрация</h1>
 
 <?if($_SESSION['auth'] != true){?>
 
@@ -43,7 +43,7 @@
         <input class="reginput" type="password" class="back3" name="pass-repeat" placeholder="Повторите пароль" required>
         <input class="reginput" type="text" class="back4" name="email" placeholder="Введите email" required>
         <input class="reginput" type="text" class="back5" name="name" placeholder="Введите имя" required>
-        <input class="reginput btn btn-outline-light"" type="submit" value="Войти" name="reg">
+        <input class="reginput btn btn-outline-light" type="submit" value="Войти" name="reg">
     </form>
     <?}?>
 

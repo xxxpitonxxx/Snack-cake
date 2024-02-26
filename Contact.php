@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+
+    
 </head>
 
 
@@ -17,8 +20,6 @@
 <?
 session_start();
 ?>
-
-
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container card1">
           <a class="navbar-brand" href="index.php">Snack<i class="fa-regular fa-handshake"></i>cake</a>
@@ -66,7 +67,7 @@ session_start();
             <div class="but1">
             <button class="btn btn-outline-danger" type="submit">Корзина <i class="fas fa-cart-shopping"></i></button>
             
-            <button onclick="window.location.href = 'auth.php';" class="btn btn-outline-danger" type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
+            <button onclick="window.location.href = 'auth.php';" class="btn btn-outline-danger"  type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
             </div>
             
           </div>
@@ -76,86 +77,53 @@ session_start();
       
 
 
+  <div class="container">
+  
 
-<div class="back">     
-
-
-<h1>Добро пожаловать в магазин Snack-cake!</h1>
-
-<h2>Популярные товары</h2>
-
-    
-<div class="shop">
-
-<?
-session_start();
-include 'dbconnect.php';
-
-if($_SESSION['role'] == 'admin'){?>
- <!--  <div>
-        You Admin!  
-    </div>-->
-    <?}else{
-
-       // echo 'hello user';
-        
-    }
-    
-
-
-           
-
-            //заменяем на функцию ооп
-            $db = dbconn();
-
-            $query = $db->query("SELECT * FROM `Ice-cream`");
-
-            while($row = $query->fetch_assoc()) {
-             
-            ?>
-            
-            
-            <div class="tovar">
-           
-            <img class="foto" src="<?=$row['photo']?>" alt="">
-            <br>
-              <div class="name">
-            <?=$row['Название']?>
-            <br>
-            <?=$row['Цена']?>
-            <br> 
-            <?=$row['Вес']?>
-            <br>
-              </div>
-
-            <div class="podr btn btn-outline-info">
-            <a href="/card.php?id=<?=$row['id']?>">Подробнее</a>
-            </div>
-              
-            </div>
-            <?
-            }
-        
-            if($_SESSION['role'] == 'admin'){?>
-              <div class="tovar">
-
-                <a href="new.php" class=""><div  class=" btn btn-outline-secondary tovar foto but"></div></a>
-                <div class="">
-                <a class="podr btn btn-outline-info" href="/new.php?id=<?=$row['id']?>">Добавить товар</a>
-                </div>
-              </div>
-                
-                <?}
-
-
-?>
+<div class="map">	
+	<div class="wrp">
+		<div class="map-box">
+			<h2>Наши контакты</h2>
+			<p>г. Калуга, Ленина 7</p>
+			<p><a href="tel:+7 (495) 123-45-67">+7 (4842) 91-91-91</a></p>
+			<p><a href="mailto:info@site.com">snack-cake.@mail.ru</a></p>
+		</div>
+	</div>
+	<div id="map"></div>
 </div>
+ 
+<script src="//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
+<script>
+ymaps.ready(init); 
+function init(){
+	var myMap = new ymaps.Map("map",{center: [54.531758, 36.276711],zoom: 13});
+	
+	// Элементы управления картой
+	//myMap.controls.add("zoomControl").add("typeSelector").add("mapTools");
+	
+	ymaps.geocode("г. Москва, Тверская 7").then(function (res) {
+		var coord = res.geoObjects.get(0).geometry.getCoordinates();
+		var myPlacemark = new ymaps.Placemark(coord, {}, {
+			iconImageHref: "/img/map.png",
+			iconImageSize: [54, 74],
+			iconImageOffset: [-27, -74]
+		});
+		myMap.geoObjects.add(myPlacemark);
+		myMap.setCenter(coord);	
+			
+		// Сдвиг центра карты вправо
+		var newcoord = myMap.getGlobalPixelCenter();
+		newcoord[0] -= 150;
+		myMap.setGlobalPixelCenter(newcoord);				
+	});
+}
+</script>
 </div>
 
 
 
-<!-- Section: Links  -->
-<section class="">
+    <!-- Section: Links  -->
+    <section class="">
       <div class="container text-center text-md-start mt-5 card1">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -233,7 +201,7 @@ if($_SESSION['role'] == 'admin'){?>
       </div>
     </section>
     <!-- Section: Links  -->
- 
+  
 
 
 
