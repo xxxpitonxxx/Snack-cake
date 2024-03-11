@@ -14,14 +14,16 @@
 
 
 <body>
-
+<?
+session_start();
+?>
 <?include "header.php"?>
 
       
       
 <div class="back">
 
-<h1>Добро пожаловать в магазин Snack-cake!</h1>
+<h1 class="mar">Добро пожаловать в магазин Snack-cake!</h1>
 
 <br>
 <h2>У нас очень вкусно!</h2>
@@ -113,8 +115,8 @@ if($_SESSION['role'] == 'admin'){?>
             <br>
               </div>
 
-            <div class="podr btn btn-outline-info">
-            <a href="/card.php?id=<?=$row['id']?>">Подробнее</a>
+            <div class="podr btn btn-outline-danger">
+            <a class="t3" href="/card.php?id=<?=$row['id']?>">Подробнее</a>
             </div>
               
             </div>

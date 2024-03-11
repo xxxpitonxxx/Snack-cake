@@ -1,6 +1,5 @@
 <?
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,11 +17,11 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="authbody">
-
-
-
-  
+<body class="back">
+<?
+session_start();
+?>
+<?include "header.php"?>
     <?
 
     include 'dbconnect.php';
@@ -35,6 +34,8 @@ session_start();
       $login = $_POST['login'];
       $pass = md5($_POST['pass']);
 
+      //var_dump($pass);
+
       if (!empty($login) and !empty($pass)) {
 
         $db = dbconn();
@@ -42,7 +43,7 @@ session_start();
         $query = $db->query("SELECT * FROM `Users` WHERE `login` = '$login' AND `pass` = '$pass' ");
         if ($query) {
           $data = mysqli_fetch_assoc($query);
-
+          
           $_SESSION['auth'] = true;
           $_SESSION['login'] = $data['login'];
           $_SESSION['role'] = $data['role'];
@@ -79,17 +80,17 @@ session_start();
 
         <input class="authinput" type="text" name="login" placeholder="Введите логин" required> <br>
         <input class="authinput" type="password" name="pass" placeholder="Введите пароль" required> <br>
-        <input class="authinput" type="submit" value="Войти" name="auth"> <br>
+        <input class="authinput btn btn-dark" type="submit" value="Войти" name="auth"> <br>
         <br>
 
       </form>
 
       <div class="">
-        <a class="btn btn-outline-light" href="reg.php">Регистрация</a> <br>
+        <a class="btn btn-dark" href="reg.php">Регистрация</a> <br>
 
 
         <? if ($_SESSION['auth'] == true) { ?>
-          <a class="btn btn-outline-light" href="desroy.php">Выход</a>
+          <a class="btn btn-dark" href="desroy.php">Выход</a>
         <? } ?>
       </div>
     </div>
@@ -98,7 +99,7 @@ session_start();
 
 
 
-
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

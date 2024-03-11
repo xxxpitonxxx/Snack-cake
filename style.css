@@ -1,6 +1,6 @@
 
 .back{
-    background-image: url("https://html5book.ru/wp-content/uploads/2015/05/background13.jpg");
+    background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614852553_145-p-foni-dlya-prezentatsii-besplatno-147.jpg);
 }
 
 
@@ -10,6 +10,25 @@ h1,h2{
     display: flex;
     justify-content: center;
 }
+.colorFot{
+  background: #012780;
+}
+.colorDel{
+  background: red;
+}
+.colorcard{
+  background: #0d42bd;
+}
+.shadowcard{
+  box-shadow: 5px 0px 27px 23px rgba(0,0,0,0.77);
+}
+.navHead{
+  margin-top: 25px;
+}
+.textcolor{
+  color: white;
+}
+
 .authH1{
   font-family: arial;
 }
@@ -22,7 +41,11 @@ h1,h2{
     margin-top: 30px;
     padding: 20px;
 }
-
+.comment{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
 .carus{
     display: flex;
     justify-content: center;
@@ -39,6 +62,10 @@ h1,h2{
     flex-direction: column;
     align-items: center;
     
+}
+.tovarcard{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .foto{
@@ -106,6 +133,7 @@ h1,h2{
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
+    
 }
 .background .shape{
     height: 200px;
@@ -144,9 +172,10 @@ h1,h2{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
+
 .authform *{
     font-family: 'Poppins',sans-serif;
-    color: #ffffff;
+    
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -159,15 +188,34 @@ h1,h2{
 }
 
 .t1{
-    font-size: 32px;
+    font-size: 50px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
-    color: white;
+    color: black;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
+.t2{
+  text-align: center;
+  color: black;
+}
+.t3{
+  text-decoration: none;
+  color: black;
+}
+.t4{
+  display: block;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
 label{
     display: block;
     margin-top: 30px;
@@ -196,8 +244,18 @@ label{
     font-size: 14px;
     font-weight: 300;
 }
+.reginput1{
+  display: block;
+  height: 50px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: 300;
+}
 ::placeholder{
-    color: #e5e5e5;
+    color: black;
 }
 .authbutton{
     margin-top: 50px;
@@ -284,7 +342,6 @@ label{
   }
   
   .text-blk.section-text {
-    color: rgb(147, 147, 147);
     max-width: 750px;
     margin-top: 25px;
     margin-right: 0px;

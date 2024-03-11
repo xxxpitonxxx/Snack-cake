@@ -14,10 +14,10 @@
 
 
 <body>
+
 <?
 session_start();
 ?>
-
 
     <!-- Section: Links  -->
     <section class="">
@@ -70,12 +70,12 @@ session_start();
               <a href="Howbuy.php" class="text-reset">Как сделать заказ</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Способ оплаты</a>
+              <a href="cash.php" class="text-reset">Способ оплаты</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Доставка</a>
+              <a href="delivery.php" class="text-reset">Доставка</a>
               <p>
-              <a href="#!" class="text-reset">Возврат денежных средств</a>
+              <a href="priz.php" class="text-reset">Акции</a>
             </p>
             </p>
           </div>

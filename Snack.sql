@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 11 2024 г., 18:00
--- Версия сервера: 10.8.4-MariaDB
+-- Время создания: Мар 05 2024 г., 20:54
+-- Версия сервера: 8.0.30
 -- Версия PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -28,14 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Cake` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -71,14 +71,14 @@ INSERT INTO `Cake` (`id`, `Название`, `Цена`, `Вес`, `photo`, `А
 --
 
 CREATE TABLE `Cheese-cake` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -106,14 +106,14 @@ INSERT INTO `Cheese-cake` (`id`, `Название`, `Цена`, `Вес`, `phot
 --
 
 CREATE TABLE `Croissant` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -136,14 +136,14 @@ INSERT INTO `Croissant` (`id`, `Название`, `Цена`, `Вес`, `photo`
 --
 
 CREATE TABLE `Donut` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -174,14 +174,14 @@ INSERT INTO `Donut` (`id`, `Название`, `Цена`, `Вес`, `photo`, `�
 --
 
 CREATE TABLE `Ice-cream` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -215,14 +215,14 @@ INSERT INTO `Ice-cream` (`id`, `Название`, `Цена`, `Вес`, `photo`
 --
 
 CREATE TABLE `Novinki` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -254,14 +254,14 @@ INSERT INTO `Novinki` (`id`, `Название`, `Цена`, `Вес`, `photo`, 
 --
 
 CREATE TABLE `Pie` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -281,14 +281,14 @@ INSERT INTO `Pie` (`id`, `Название`, `Цена`, `Вес`, `photo`, `А�
 --
 
 CREATE TABLE `Plate` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -305,9 +305,31 @@ INSERT INTO `Plate` (`id`, `Название`, `Цена`, `Вес`, `photo`, `�
 (7, 'Мороженое ассорти', '330 р.', '800 г.', 'files\\Мороженое ассорти.jpg\"', '10180', 'Масло сливочное, цельное или обезжиренное молоко, сухое молоко, молоко сгущенное с сахаром, натуральные сливки, сахар.', 'Мороженое 8% с заменителем молочного жира ассорти 4 вкуса в вафельном стаканчике «Океан вкуса».\r\nАссорти 4 вкуса, по 3 шт:\r\nМалина\r\nКиви\r\nАпельсин\r\nФисташка'),
 (8, 'Мороженое рожки ассорти', '440 р.', '840 г.', 'files\\Мороженое рожки ассорти.jpg\"', '10181', 'Молоко коровье, вода питьевая, сахар-песок, масло сливочное, молоко сухое обезжиренное, сухой глюкозный сироп, фисташка тертая, масса лесного ореха, стабилизатор-эмульгатор (моно- и диглицериды жирных кислот, гуаровая камедь, камедь рожкового дерева, карбоксиметилцеллюлоза), ароматизатор натуральный Фисташка, натуральные красители (хлорофилл, Лайм зеленый).', 'Ассорти рожков, 4 вкуса по 2 шт.:\r\nРожок \"Лайк\" сливочное клубнично-ванильное\r\nРожок \"Лайк\" сливочное шоколадно-фисташковое\r\nРожок Лайк ванильное 10 % с наполнителем соленая карамель и кусочками карамели\r\nРожок Лайк крем-брюле 10 %'),
 (9, 'Печенье ассорти', '470 р.', '490 г.', 'files\\Печенье ассорти.jpg\"', '10182', 'Коричневый сахар, пастеризованные яйца от свободной курицы, несоленое сливочное масло, темный шоколад (15%) (сахар, какао тертое, масло какао, эмульгатор: соевый лецитин (Е322)), порошок какао.', 'Ассорти 7 порций:\r\nПеченье \"Кокос-апельсин\"\r\nПеченье \"Геркулес с изюмом\"\r\nПеченье \"Брауни\"\r\nПеченье \"Клюква-белый шоколад\"\r\nПеченье \"Мята-шоколад\"\r\nПеченье \"Шоколадная крошка\"\r\nПеченье \"4 шоколада\"'),
-(10, 'Лёд ассорти(клюква, апельсин, дюшес, тархун)', '800 р.', '2800 г.', 'files\\Лёд ассорти.jpg\"', '10133', 'Вода питьевая, сахар, сухой глюкозный сироп, натуральные концентраты соков (яблочный, лимонный, клубничный), комплексная пищевая добавка (стабилизатор: гуаровая камедь; декстроза; стабилизаторы: альгинат натрия, каррагинан), лимонная кислота, натуральные ароматизаторы (\"Апельсин\", \"тархун\", \"дюшес\", \"клюква\"), красители натуральные \"хлорофилл\", \"куркумин\", \"кармин\".', 'Ассорти льдов 4 вкуса: клюква, апельсин, дюшес, тархун'),
+(10, 'Фруктовый лёд ассорти', '800 р.', '2800 г.', 'files\\Лёд ассорти.jpg\"', '10133', 'Вода питьевая, сахар, сухой глюкозный сироп, натуральные концентраты соков (яблочный, лимонный, клубничный), комплексная пищевая добавка (стабилизатор: гуаровая камедь; декстроза; стабилизаторы: альгинат натрия, каррагинан), лимонная кислота, натуральные ароматизаторы (\"Апельсин\", \"тархун\", \"дюшес\", \"клюква\"), красители натуральные \"хлорофилл\", \"куркумин\", \"кармин\".', 'Ассорти льдов 4 вкуса: клюква, апельсин, дюшес, тархун'),
 (11, 'Эклеры ассорти', '900 р.', '800 г.', 'files\\Эклеры ассорти.jpg\"', '10183', 'Молоко питьевое м. д. ж. 3,2 %, масло сладко-сливочное несолёное м. д. ж. 72,5 %, мука пшеничная хлебопекарная высшего сорта, продукт яичный (меланж), сливки питьевые м. д. ж. 10 %, сахар, вода питьевая, продукт яичный (желток), горькая шоколадная масса (какао тёртое, сахар, масло какао, эмульгатор – лецитин соевый), крахмал кукурузный, ванильная эссенция, соль пищевая. Продукция производится на предприятии, где используются молоко, яйца, злаки, содержащие глютен, арахис.', 'Ассорти из 3 видов эклеров:\r\nшоколадные\r\nванильные\r\nкарамельные'),
 (12, 'Макаруны ассорти', '1200 р.', '550 г.', 'files\\Макаруны ассорти.jpg\"', '10184', 'Ваниль, малина, молоко массовая доля жира 3,2 %, сироп глюкозы, сироп малины краситель: комплексная пищевая добавка пунцовый тартразин, уголь растительный, комплексная пищевая добавка кандурин. Фисташка: сахар, шоколад белый 34%, сахарная пудра, мука миндальная 100%, пастеризованный яичный белок, вода питьевая, сливки массовая доля жира 33 % молоко массовая доля жира 3,2%, паста фисташковая.', 'Миндальное печенье с начинкой. В коробке 5 вкусов \"малина\", \"шоколад\", \"вишня\", \"фисташка\", \"карамель\".\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `name`, `email`, `message`, `date`) VALUES
+(45, 'test', '', 'ааааааааааааааа', '2024-03-05 19:57:07'),
+(46, 'test', '', 'ffffffffffffff', '2024-03-05 20:00:30');
 
 -- --------------------------------------------------------
 
@@ -316,14 +338,14 @@ INSERT INTO `Plate` (`id`, `Название`, `Цена`, `Вес`, `photo`, `�
 --
 
 CREATE TABLE `Snack-cake` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -362,14 +384,14 @@ INSERT INTO `Snack-cake` (`id`, `Название`, `Цена`, `Вес`, `photo
 --
 
 CREATE TABLE `Tort` (
-  `id` int(20) NOT NULL,
-  `Название` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Цена` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Вес` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Артикул` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Состав` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Описание` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL
+  `id` int NOT NULL,
+  `Название` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Цена` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Вес` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Артикул` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Состав` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Описание` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -396,12 +418,12 @@ INSERT INTO `Tort` (`id`, `Название`, `Цена`, `Вес`, `photo`, `А
 --
 
 CREATE TABLE `Users` (
-  `id` int(20) NOT NULL,
-  `login` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` int NOT NULL,
+  `login` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `pass` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `role` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -409,9 +431,9 @@ CREATE TABLE `Users` (
 --
 
 INSERT INTO `Users` (`id`, `login`, `pass`, `email`, `name`, `role`) VALUES
-(3, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@mail.ru', 'test', 'admin'),
-(5, 'Piton', 'd79c8788088c2193f0244d8f1f36d2db', 'xxxpitonxxx@yandex.ru', 'Саша', 'admin'),
-(6, 'admin', '84489665', 'ddddd@mail.ru', 'admin', 'admin');
+(25, '333', '698d51a19d8a121ce581499d7b701668', 'pit@mail.com', 'Петя', NULL),
+(27, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@yandex.ru', 'Alex', 'admin'),
+(28, '111', '698d51a19d8a121ce581499d7b701668', 'pit@mail.com', 'Петя', NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -476,6 +498,12 @@ ALTER TABLE `Plate`
   ADD UNIQUE KEY `id` (`id`,`Артикул`);
 
 --
+-- Индексы таблицы `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `Snack-cake`
 --
 ALTER TABLE `Snack-cake`
@@ -494,9 +522,7 @@ ALTER TABLE `Tort`
 --
 ALTER TABLE `Users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `login` (`login`),
-  ADD UNIQUE KEY `pass` (`pass`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `login` (`login`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -506,67 +532,73 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT для таблицы `Cake`
 --
 ALTER TABLE `Cake`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT для таблицы `Cheese-cake`
 --
 ALTER TABLE `Cheese-cake`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `Croissant`
 --
 ALTER TABLE `Croissant`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `Donut`
 --
 ALTER TABLE `Donut`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `Ice-cream`
 --
 ALTER TABLE `Ice-cream`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT для таблицы `Novinki`
 --
 ALTER TABLE `Novinki`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблицы `Pie`
 --
 ALTER TABLE `Pie`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `Plate`
 --
 ALTER TABLE `Plate`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT для таблицы `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT для таблицы `Snack-cake`
 --
 ALTER TABLE `Snack-cake`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT для таблицы `Tort`
 --
 ALTER TABLE `Tort`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

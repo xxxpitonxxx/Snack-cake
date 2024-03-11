@@ -1,34 +1,18 @@
 
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
-</head>
-
-
-<body>
-<?
-session_start();
-?>
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg  colorFot">
         <div class="container card1">
-          <a class="navbar-brand" href="index.php">Snack<i class="fa-regular fa-handshake"></i>cake</a>
+          <a class="navbar-brand" href="index.php"><div class="textcolor">Snack<i class="fa-regular fa-handshake textcolor"></i>cake</div></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navHead">
                 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Наша продукция
+                    <div class="textcolor">Наша продукция</div>
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="Icecream.php">Мороженое</a></li>
@@ -43,19 +27,22 @@ session_start();
                       <li><a class="dropdown-item" href="Novinki.php">Новинки</a></li>
                     </ul>
                   </li>
-
+                
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Акции <i class="fas fa-gift"></i></a>
+                <a class="nav-link active" aria-current="page" href="priz.php"><div class="textcolor">Акции <i class="fas fa-gift textcolor"></i></div></a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Howbuy.php">Как купить</a>
+                <a class="nav-link active" aria-current="page" href="Howbuy.php"><div class="textcolor">Как купить</div></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="aboutUs.php">О компании</a>
+                <a class="nav-link active" aria-current="page" href="aboutUs.php"><div class="textcolor">О компании</div></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Contact.php">Контакты</a>
+                <a class="nav-link active" aria-current="page" href="Contact.php"><div class="textcolor">Контакты</div></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="comment.php"><div class="textcolor">Отзывы</div></a>
               </li>
 
 
@@ -79,9 +66,9 @@ session_start();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-</body>
 
-</html>
+
+
 
 
 

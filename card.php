@@ -1,10 +1,5 @@
 
 
-<?
-    session_start();
-    include 'dbconnect.php';
-
-?>
 
 
 
@@ -17,19 +12,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <style>
-   body {
-    margin-top: 50px;
-    background: #333; /* Цвет фона */
-    color: #fc0; /* Цвет текста */
-   }
-  </style>
+
 </head>
 
 
 
-<body>
+<body class="colorcard">
+<?
+    session_start();
+    include 'dbconnect.php';
 
+?>
+
+<?include "header.php"?>
 <?
 $id = $_GET['id'];
 
@@ -38,12 +33,12 @@ $db = dbconn();
     $query = $db->query("SELECT * FROM `Snack-cake` WHERE `id`='$id'");
     while($row = $query->fetch_assoc()) {
         ?>
-        
+        <br>
         <h1><p class="card-title text"><?=$row['Название']?></p></h1>
         <br>
 
         <div class="card mb-3 podr" style="max-width: 800px;">
-          <div class="row g-0 card1  back">
+          <div class="row g-0 card1  back shadowcard">
             <div class="col-md-4 card_foto">
               <img src="<?=$row['photo']?>" class="img-fluid rounded-start" alt="...">
             </div>
@@ -58,9 +53,11 @@ $db = dbconn();
             </div>
           </div>
         </div>
-
-        <div class="but">
+        <br>
+        <br>
+        <div class="tovarcard">
         <button class="btn btn-outline-warning but">Добавить в корзину</button>
+        <button class="btn btn-outline-warning but">Напишите отзыв</button>
         </div>
         
         
