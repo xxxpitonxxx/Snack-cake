@@ -25,7 +25,7 @@ session_start();
 <div class="back">      
 
 
-<h1 class="mar">Добро пожаловать в магазин Snack-cake!</h1>
+<h1 class="mar"><div class="mt-3">Добро пожаловать в магазин Snack-cake!</div></h1>
 
 
     
@@ -59,7 +59,7 @@ if($_SESSION['role'] == 'admin'){?>
             ?>
             
             
-            <div class="tovar">
+            <div class="tovar mt-3">
            
             <img class="foto" src="<?=$row['photo']?>" alt="">
             <br>
@@ -73,7 +73,7 @@ if($_SESSION['role'] == 'admin'){?>
               </div>
 
             <div class="podr btn btn-outline-danger">
-            <a class="t3" href="/card.php?id=<?=$row['id']?>">Подробнее</a>
+            <a class="t3" href="/card.php?id=<?=$row['id']?>&type=Tort">Подробнее</a>
             </div>
               
             </div>
@@ -81,11 +81,11 @@ if($_SESSION['role'] == 'admin'){?>
             }
         
             if($_SESSION['role'] == 'admin'){?>
-              <div class="tovar">
+              <div class="tovar mt-3">
 
-                <a href="new.php" class=""><div  class=" btn btn-outline-secondary tovar foto but"></div></a>
+                <a href="new.php" class=""><div  class=" btn btn-outline-danger tovar foto but"></div></a>
                 <div class="">
-                <a class="podr btn btn-outline-info" href="/new.php?id=<?=$row['id']?>">Добавить товар</a>
+                <a class="podr btn btn-outline-danger" href="/new.php?id=<?=$row['id']?>">Добавить товар</a>
                 </div>
               </div>
                 

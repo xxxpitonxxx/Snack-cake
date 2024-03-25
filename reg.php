@@ -66,20 +66,11 @@ if ($_POST['reg']) {
 <body class="back">
 <?include "header.php"?>
 
-      
-
       <h1 class="t1 authH1">Регистрация</h1>
 
 <?if($_SESSION['auth'] != true){?>
 
-    <div>
-
-
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-
+    <div class="container mmm">
 
     <div class="authform">
 

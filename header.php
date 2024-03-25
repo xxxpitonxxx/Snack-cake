@@ -1,6 +1,3 @@
-
-
-
 <nav class="navbar navbar-expand-lg  colorFot">
         <div class="container card1">
           <a class="navbar-brand" href="index.php"><div class="textcolor">Snack<i class="fa-regular fa-handshake textcolor"></i>cake</div></a>
@@ -49,7 +46,7 @@
             </ul>
             
             <div class="but1">
-            <button class="btn btn-outline-danger" type="submit">Корзина <i class="fas fa-cart-shopping"></i></button>
+            <button onclick="window.location.href = 'basket.php'" class="btn btn-outline-danger" type="submit">Корзина <i class="fas fa-cart-shopping"></i></button>
             
             <button onclick="window.location.href = 'auth.php';" class="btn btn-outline-danger"  type="submit">Войти <i class="fas fa-arrow-right-to-bracket"></i></button>
             </div>

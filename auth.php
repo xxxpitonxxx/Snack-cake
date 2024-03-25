@@ -1,5 +1,38 @@
-<?
-session_start();
+<?session_start();
+
+include 'dbconnect.php';
+
+if (!empty($_SESSION['login'])) {
+  //echo 'Hello '.$_SESSION['login'];
+}
+if ($_POST['auth']) {
+
+  $login = $_POST['login'];
+  $pass = md5($_POST['pass']);
+
+  //var_dump($pass);
+
+  if (!empty($login) and !empty($pass)) {
+
+    $db = dbconn();
+    
+    $query = $db->query("SELECT * FROM `Users` WHERE `login` = '$login' AND `pass` = '$pass' ");
+    if ($query) {
+      $data = mysqli_fetch_assoc($query);
+      
+      $_SESSION['auth'] = true;
+      $_SESSION['login'] = $data['login'];
+      $_SESSION['role'] = $data['role'];
+     
+      header('Location: /index.php');
+
+    } else {
+      echo 'Данные не верны';
+    }
+
+  }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,60 +52,15 @@ session_start();
 
 <body class="back">
 <?
-session_start();
-?>
-<?include "header.php"?>
-    <?
 
-    include 'dbconnect.php';
-
-    if (!empty($_SESSION['login'])) {
-      //echo 'Hello '.$_SESSION['login'];
-    }
-    if ($_POST['auth']) {
-
-      $login = $_POST['login'];
-      $pass = md5($_POST['pass']);
-
-      //var_dump($pass);
-
-      if (!empty($login) and !empty($pass)) {
-
-        $db = dbconn();
-
-        $query = $db->query("SELECT * FROM `Users` WHERE `login` = '$login' AND `pass` = '$pass' ");
-        if ($query) {
-          $data = mysqli_fetch_assoc($query);
-          
-          $_SESSION['auth'] = true;
-          $_SESSION['login'] = $data['login'];
-          $_SESSION['role'] = $data['role'];
-          header('Location: /index.php');
-
-
-        } else {
-          echo 'Данные не верны';
-        }
-
-      }
-    }
-
-
-
+    include 'header.php';
     ?>
   
-
-
-
   
   <h1 class="t1 authH1">Авторизация</h1>
+ 
+  <div class="container mmm">
 
-  <div class="">
-
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
 
     <div class="authform">
 
@@ -90,14 +78,11 @@ session_start();
 
 
         <? if ($_SESSION['auth'] == true) { ?>
-          <a class="btn btn-dark" href="desroy.php">Выход</a>
+          <a class="btn btn-dark mt-3" href="desroy.php">Выход</a>
         <? } ?>
       </div>
     </div>
   
-
-
-
 
     
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

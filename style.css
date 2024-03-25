@@ -1,8 +1,8 @@
 
 .back{
-    background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614852553_145-p-foni-dlya-prezentatsii-besplatno-147.jpg);
+    background: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614852553_145-p-foni-dlya-prezentatsii-besplatno-147.jpg) no-repeat;
+    
 }
-
 
 
 h1,h2{
@@ -14,10 +14,10 @@ h1,h2{
   background: #012780;
 }
 .colorDel{
-  background: red;
+  color: red;
 }
 .colorcard{
-  background: #0d42bd;
+  background: #658ce8;
 }
 .shadowcard{
   box-shadow: 5px 0px 27px 23px rgba(0,0,0,0.77);
@@ -27,6 +27,10 @@ h1,h2{
 }
 .textcolor{
   color: white;
+}
+.textBasket{
+  text-decoration: none;
+  color: #080710;
 }
 
 .authH1{
@@ -45,6 +49,24 @@ h1,h2{
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+
+.comment-sec{
+  margin-top: 10px;
+}
+div.card-sec{
+  border-radius: 20px;
+}
+::placeholder {
+  color: blue;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment-third{
+
+  margin-top: 20px;
 }
 .carus{
     display: flex;
@@ -75,6 +97,11 @@ h1,h2{
     border-radius: 20px;
 }
 
+.foto1{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
 .podr{
     margin: 0 auto;
     font-size: 18px;
@@ -126,43 +153,14 @@ h1,h2{
 .authbody{
     background-color: #080710;
 }
-.background{
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-    
-}
-.background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-.shape:first-child{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-}
+
+
 .authform{
     height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
-    position: absolute;
+    position: relative;
+    margin-top: 30%;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
@@ -175,7 +173,6 @@ h1,h2{
 
 .authform *{
     font-family: 'Poppins',sans-serif;
-    
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -186,6 +183,12 @@ h1,h2{
     line-height: 42px;
     text-align: center;
 }
+.mmm{
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+
 
 .t1{
     font-size: 50px;
@@ -248,7 +251,7 @@ label{
   display: block;
   height: 50px;
   width: 100%;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 0 10px;
   margin-top: 18px;
   font-size: 14px;
@@ -467,3 +470,22 @@ label{
     }
   }
 
+  .inputnew{
+    margin: 0 5px;
+    padding: 5px;
+    top: 0px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(bottom, rgba(85,85,85,.1), rgba(255,255,255,.1));
+    background-image: -moz-linear-gradient(bottom, rgba(85,85,85,.1), rgba(255,255,255,.1));
+    background-image: -o-linear-gradient(bottom, rgba(85,85,85,.1), rgba(255,255,255,.1));
+    background-image: -ms-linear-gradient(bottom, rgba(85,85,85,.1), rgba(255,255,255,.1));
+    background-image: linear-gradient(to top, rgba(85,85,85,.1), rgba(255,255,255,.1));
+    box-shadow: inset 0 0 1px #fff;
+    text-shadow: 0 1px 0 #fffcf6;
+    border-radius: 10px;
+    cursor: pointer;
+    visibility:visible;
+    position: relative;
+}

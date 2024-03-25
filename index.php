@@ -21,11 +21,7 @@ session_start();
 ?>
 <?include "header.php"?>
 
-      
-      
-
-      
-      
+            
 <div class="back">
 <br>
 <h1 class="">Добро пожаловать в магазин Snack-cake!</h1>
@@ -63,6 +59,8 @@ session_start();
       </div>
     </div>
   </div>
+
+  
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Назад</span>
@@ -93,10 +91,7 @@ if($_SESSION['role'] == 'admin'){?>
        // echo 'hello user';
         
     }
-    
-
-
-           
+       
 
             //заменяем на функцию ооп
             $db = dbconn();
@@ -108,7 +103,7 @@ if($_SESSION['role'] == 'admin'){?>
             ?>
             
             
-            <div class="tovar">
+            <div class="tovar mt-3">
            
             <img class="foto" src="<?=$row['photo']?>" alt="">
             <br>
@@ -122,7 +117,7 @@ if($_SESSION['role'] == 'admin'){?>
               </div>
 
             <div class="podr btn btn-outline-danger">
-            <a class="t3" href="/card.php?id=<?=$row['id']?>">Подробнее</a>
+            <a class="t3" href="/card.php?id=<?=$row['id']?>&type=Snack-cake">Подробнее</a>
             </div>
               
             </div>
@@ -130,15 +125,16 @@ if($_SESSION['role'] == 'admin'){?>
             }
         
             if($_SESSION['role'] == 'admin'){?>
-                <div class="tovar">
+                <div class="tovar mt-3">
 
-                  <a href="new.php" class=""><div  class=" btn btn-outline-secondary tovar foto but"></div></a>
+                  <a href="new.php" class=""><div  class=" btn btn-outline-danger tovar foto but"></div></a>
                   <div class="">
-                  <a class="podr btn btn-outline-info" href="/new.php?id=<?=$row['id']?>">Добавить товар</a>
+                  <a class="podr btn btn-outline-danger" href="/new.php?category=Snack-cake">Добавить товар</a>
                   </div>
                 </div>
                 
                 <?}
+
 
 
 ?>

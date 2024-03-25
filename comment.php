@@ -1,4 +1,4 @@
-<?session_start();
+<? session_start();
 
 ?>
 
@@ -16,21 +16,45 @@
 
 
 <body class="back">
-<?
-session_start();
-?>
-<?include "header.php"?>
+    <?
+    session_start();
+    ?>
+    <? include "header.php" ?>
+
+    <br>
+    <h1>Ваши отзывы</h1>
 
 
+    <div class="comment">
+
+        <div class="container">
 
 
+            <form class="" method="post">
+                <h2>Нам очень важно ваше мнение!</h2>
+                <br>
+                <div class="card-sec"><textarea class="t2 t4" name="message" placeholder="Оставьте отзыв о нашем интернет магазине"
+                    required></textarea></div><br>
+                <input class="authinput btn btn-danger t2" type="submit" value="Отправить">
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
 
 <?php
 
 
 include 'dbconnect.php';
 // Проверка формы на пустоту
-if(!empty($_POST['message'])) {
+if (!empty($_POST['message'])) {
     // Подключение к базе данных
     $db = dbconn();
     // Подготовка данных
@@ -40,8 +64,8 @@ if(!empty($_POST['message'])) {
     // Запрос к базе данных
     $sql = "INSERT INTO `reviews`(`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
     // Выполнение запроса
-    if($db->query($sql)) {
-       // echo "Ваш отзыв отправлен!";
+    if ($db->query($sql)) {
+        // echo "Ваш отзыв отправлен!";
     } else {
         //echo "Ошибка: " . $sql . "<br>" . $db->error;
     }
@@ -51,58 +75,42 @@ if(!empty($_POST['message'])) {
 ?>
 
 
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <?php
+    // Подключение к базе данных
+    $db = dbconn();
+    // Запрос к базе данных
+    $sql = "SELECT * FROM reviews ORDER BY date DESC";
+    // Выполнение запроса
+    $result = $db->query($sql);
+    ?>
 
-<?php
-// Подключение к базе данных
-$db = dbconn();
-// Запрос к базе данных
-$sql = "SELECT * FROM reviews ORDER BY date DESC";
-// Выполнение запроса
-$result = $db->query($sql);
-if($result->num_rows > 0) {
-    // Вывод данных построчно
-    while($row = $result->fetch_assoc()) {
-        echo '<p><strong>' . $row['name'] . '</strong> ' . $row['date'] . '<br>' . $row['message'] . '</p>';
+
+    <?php
+    if ($result->num_rows > 0) {
+        // Вывод данных построчно
+        while ($row = $result->fetch_assoc()) {
+            ?>
+            <div class="card-sec card  comment-sec">
+                <div class="card-body">
+
+                <h3><?=$row['name']?></h3>
+                <?=$row['date'] ?><br>
+                <br>
+                <h3><?=$row['message']?></h3>
+                </div>
+            </div><br/>
+            <?
+            //echo '<p><strong>' . $row['name'] . '</strong> ' . $row['date'] . '<br>' . $row['message'] . '</p>';
+        }
+    } else {
+        //echo "Отзывов пока нет.";
     }
-} else {
-    //echo "Отзывов пока нет.";
-}
-// Закрытие подключения
-$db->close();
-?>
+    // Закрытие подключения
+    $db->close();
+    ?>
 
-
-
-
-
-    <h2 class="mar">Ваши отзывы</h2>
-
-    <div class="comment">
-
-    <div class="conteiner">
-
-
-    <form class="" method="post">
-    
-        <textarea class="t2 t4" name="message" placeholder="Оставьте отзыв о нашем интернет магазине" required></textarea><br>
-        <input class="authinput btn btn-dark t2" type="submit" value="Отправить">
-    </form>
-
-    </div>
-    </div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-</body>
-
-</html>
-
-
-
-
-
-
-
-
+</div>

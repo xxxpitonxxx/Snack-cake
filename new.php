@@ -1,7 +1,9 @@
 <?
 session_start();
 include 'dbconnect.php';
+$category = $_GET['category'];
 
+//echo $category;
 //if(!empty($_SESSION['login']))
 //{
 //
@@ -9,14 +11,16 @@ include 'dbconnect.php';
 
 if ($_POST['add']) {
 
-  $article = $_POST['article'];
   $productname = $_POST['productname'];
-  $brand = $_POST['brand'];
   $cost = $_POST['cost'];
+  $ves = $_POST['ves'];
+  $article = $_POST['article'];
+  $sostav = $_POST['sostav'];
   $description = $_POST['description'];
+  $category = $_POST['category'];
+  //var_dump($_POST);
 
-
-  if (!empty($article) and !empty($productname) and !empty($brand) and !empty($cost) and !empty($description)) {
+  if (!empty($productname) and !empty($cost) and !empty($ves) and !empty($article) and !empty($sostav) and !empty($description)) {
 
     $db = dbconn();
 
@@ -24,14 +28,14 @@ if ($_POST['add']) {
     $uploaddir = 'files/';
     $uploadfile = $uploaddir . basename($_FILES['photo']['name']);
     if (move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile)) {
-      echo 'ok';
+      //  echo 'ok';
     } else {
       echo 'ne ok';
     }
   }
 
-  $query = $db->query("INSERT INTO `Snack-cake`(`Название`, `Цена`, `Вес`, `photo`, `Артикул`, `Состав`, `Описание`) 
-            VALUES ('$article','$productname','$brand','$cost','$description','$uploadfile')");
+  $query = $db->query("INSERT INTO `$category`(`Название`, `Цена`, `Вес`, `photo`, `Артикул`, `Состав`, `Описание`) 
+                                       VALUES ('$productname','$cost','$ves','$uploadfile','$article','$sostav','$description')");
 
 }
 
@@ -56,7 +60,7 @@ if ($_POST['add']) {
 
 <body>
 
-<?include "header.php"?>
+  <? include "header.php" ?>
 
 
 
@@ -67,39 +71,57 @@ if ($_POST['add']) {
     <br>
 
 
-    
 
-      <div class="but">
+
+
+    <div class="but">
+      <div class="container">
 
         <form method="post" enctype="multipart/form-data">
 
-          <input  type="text" name="article" placeholder="Введите название" required><br>
-          <input  type="text" name="productname" placeholder="Введите цену" required><br>
-          <input type="text" name="brand" placeholder="Введите вес" required><br>
-          <br>
-          <input type="file" name="photo" placeholder="Выбери фото" required><br>
-          <br>
-          <input type="text" name="cost" placeholder="Введите артикул" required><br>
-          <br>
-          <textarea name="description" placeholder="Введите состав" cols="60" rows="5" required></textarea><br>
-          <br>
-          <textarea name="description" placeholder="Введите описание" cols="60" rows="5" required></textarea><br>
-          <br>
+          <select class="form-select form-select-lg mb-3" name="category">
+            <option value="Cheese-cake">Чиз-кейк</option>
+            <option value="Croissant">Круасан</option>
+            <option value="Cake">Пирожные</option>
+            <option value="Donut">Пончики</option>
+            <option value="Ice-cream">Мороженое</option>
+            <option value="Novinki">Новинки</option>
+            <option value="Pie">Пироги</option>
+            <option value="Plate">Ассорти</option>
+            <option value="Tort">Торты</option>
+            <option value="Snack-cake">Популярные</option>
+          </select>
+          
+          <input class="reginput1" type="text" name="productname" placeholder="Введите название" required>
 
-          <input type="submit" class="btn btn-outline-secondary" value="Добавить" name="add"><i
-            class="fa-thin fa-plus fa-2xl"></i>
+          <input class="reginput1" type="text" name="cost" placeholder="Введите цену" required>
+          <input class="reginput1" type="text" name="ves" placeholder="Введите вес" required>
+          
+          <div class="input-group mb-3 comment-third">
+            <input type="file" class="form-control" name="photo" id="inputGroupFile02" value="Выбери фото" required>
+          </div>
+          
+          <input class="reginput1" type="text" name="article" placeholder="Введите артикул" required>
+          <textarea class="reginput1" name="sostav" placeholder="Введите состав" cols="40" rows="8"
+            required></textarea>
+          <textarea class="reginput1" name="description" placeholder="Введите описание" cols="40" rows="8"
+            required></textarea>
+
+          <div class="comment mt-3">
+            <input type="submit" class="btn btn-danger" value="Добавить" name="add">
+          </div>
+          <br>
+          <br>
         </form>
+
       </div>
-      <br>
-      <br>
-
-
     </div>
-  
+  </div>
 
 
 
 
+  <?include "footer.php"?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
